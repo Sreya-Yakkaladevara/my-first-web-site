@@ -1,0 +1,337 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins',sans-serif;
+     box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: #f5f1f1;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?q=80&w=712&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav img{
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+}
+.logo{
+    margin: 30px 0;
+    width: 150px;
+}
+nav ul li{
+   display: inline-block;
+   list-style: none;
+   margin: 10px 20px;
+   margin-right: 50px;
+   position: relative;
+
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 35px;
+    color: black;
+    font-weight: 600;
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 7px;
+    background-color: rgb(18, 231, 203);
+    left: 0;
+    bottom: -20px;
+    position: absolute;
+    transition: width, 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+    color: rgb(8, 10, 10);
+    
+}
+.header-text h1{
+    font-size: 70px;
+    font-weight: 700;
+    margin-right: 80%;
+    
+
+}
+.header-text p{
+    font-size: 30px;
+    font-weight:bold;
+  color: rgb(226, 43, 134);
+}
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col1{
+    flex-basis: 35%;
+    margin-left: 80px;
+    
+
+}
+.about-col1 img{
+    width: 80%;
+    border-radius: 50px ;
+    background-position: center;
+    background-size: contain;
+}
+.about-col2{
+    flex-basis: 60%;
+}
+.sub-title h1{
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+}
+.about-col2 p{
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 25px;
+}
+#skills{
+    padding: 30px 0;
+}
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin: 50px 20px;
+}
+.sub-title{
+    font-size:50px ;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.pic{
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    
+}
+.list img{
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: transform 4s;
+    
+}
+.layer{
+    width: 0;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6),crimson);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: width 1s;
+}
+.pic:hover img{
+    transform: scale(1.1);
+}
+.pic:hover .layer {
+    width: 100%;
+}
+
+.titles{
+       display: flex;
+       margin: 20px 0 10px;
+}
+.tab-titles{
+    margin-right: 50px;
+    font-weight: 600;
+    font-size: 35px;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+    
+}
+.tab-titles::after{
+    content: '';
+    width: 0%;
+    height: 4px;
+    background-color: rgb(18, 231, 203);
+    left: 0;
+    bottom: -10px;
+    position: absolute;
+    transition: width, 0.5s;
+}
+
+.tab-titles.active-link::after{
+    width: 70%;
+}
+.contents ul li{
+    list-style: none;
+    margin-top: 60px 0;
+    font-size: 30px;
+    margin-bottom: 30px ;
+}
+.contents ul li span{
+    color: crimson;
+    font-size: 30px;
+}
+.contents{
+    display: none;
+    
+}
+.contents.active-content{
+    display: block;
+    margin-bottom: 200px;
+}
+#contact{
+    display: block;
+    text-align: center;
+    
+}
+.contact-col-1 p{
+    margin-top: 30px;
+    font-size: 25px;
+}
+.bx{
+    margin-right: 20px;
+    font-size: 40px;
+    color: crimson;
+}
+.contact-col-1{
+    flex-basis: 40%;
+}
+
+.social-media .bx{
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-size: 50px;
+    margin-right: 20px;
+    color: blueviolet;
+    text-decoration: none;
+    cursor: pointer;
+}
+nav .bx{
+    display: none;
+}
+
+
+
+
+@media only screen and (max-width:500px){
+    .logo{
+        width: 70px;
+    }
+    #header{
+       
+        background-image: url(https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?q=80&w=712&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        width: 100vh;
+    }
+    .header-text {
+    
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 25px;
+    }
+    nav .bx{
+        display: block;
+        font-size: 30px;
+        color: black;
+        margin-right: 120px;
+    }
+    nav ul {
+        background-color:rgb(142, 211, 196);
+        position: fixed;
+        top: 0;
+        right: -180px;
+        width:180px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: rigth, 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+        
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    nav ul .bx{
+        position: absolute;
+        top:25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 30px;
+
+    }
+    .about-col1, .about-col2{
+        flex-basis: 100%;
+    }
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2 p{
+       font-size: 14px;
+       
+    }
+    .tab-titles{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contents ul li{
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+    .contents ul li span{
+        font-size: 12px;
+    }
+    .list div{
+        font-size: 12px;
+        padding: 25px;
+
+    }
+    .bx{
+        font-size: 20px;
+        margin: 10px;
+    }
+    .social-media .bx{
+        font-size: 20px;
+        margin: 10px;
+    }
+    .contact-col-1 p{
+        font-size: 16px;
+        margin: 5px;
+    }
+
+}
